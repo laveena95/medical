@@ -100,9 +100,156 @@
           </v-container>
         </v-app>
       </v-flex>
-  <v-flex md9>
+  <v-flex md9 >
     <v-app :style="{background:$vuetify.theme.themes.dark.background}" class="rounded">
-      
+      <v-container>
+        <v-flex>
+          <v-list class="mt-5">
+            <v-list-item>
+              <v-list-item-tile class="cyan--text text--darken--1">Examination</v-list-item-tile>
+              <v-list-item-action>
+                <v-btn class="ma-2" tile outlined="" color="cyan darken-1">
+                  <v-icon left="">fas fa-eye</v-icon>SEE ALL
+                </v-btn>
+              </v-list-item-action>
+            </v-list-item>
+          </v-list>
+        </v-flex>
+  <v-flex>
+    <v-row no-gutters="">
+      <v-col cols="12" md="4">
+        <v-row>
+          <v-col cols="12" md="2">
+            <v-card height="80px" width="10px" color="green">
+            </v-card>
+          </v-col>
+          <v-col cols="12" md="10">
+            <v-list two-line="" subheader="" class="nl-n8">
+              <v-list-item>
+                <v-list-item-con>
+                  <v-list-item-subtitle>4 July 2020</v-list-item-subtitle>
+                  <v-list-item-title>Heart Disease</v-list-item-title>
+                  <v-list-item-subtitle>On going treatement</v-list-item-subtitle>
+                </v-list-item-con>
+              </v-list-item>
+            </v-list>
+          </v-col>
+        </v-row>
+      </v-col>
+
+      <v-col cols="12" md="4">
+        <v-row>
+          <v-col cols="12" md="2">
+            <v-card height="80px" width="10px" color="red">
+            </v-card>
+          </v-col>
+          <v-col cols="12" md="10">
+            <v-list two-line="" subheader="" class="nl-n8">
+              <v-list-item>
+                <v-list-item-con>
+                  <v-list-item-subtitle>5 July 2020</v-list-item-subtitle>
+                  <v-list-item-title>Odteoporosis</v-list-item-title>
+                  <v-list-item-subtitle>Incurable</v-list-item-subtitle>
+                </v-list-item-con>
+              </v-list-item>
+            </v-list>
+          </v-col>
+        </v-row>
+      </v-col>
+
+      <v-col cols="12" md="4">
+        <v-row>
+          <v-col cols="12" md="2">
+            <v-card height="80px" width="10px" color="yellow">
+            </v-card>
+          </v-col>
+          <v-col cols="12" md="10">
+            <v-list two-line="" subheader="" class="nl-n8">
+              <v-list-item>
+                <v-list-item-con>
+                  <v-list-item-subtitle>5 July 2020</v-list-item-subtitle>
+                  <v-list-item-title>Blood Pressure</v-list-item-title>
+                  <v-list-item-subtitle>Examinations</v-list-item-subtitle>
+                </v-list-item-con>
+              </v-list-item>
+            </v-list>
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
+  </v-flex>
+  <v-flex class="mt-12">
+    <v-row no-gutters="">
+      <v-col cols="12" md="8">
+        <v-flex>
+          <v-list class="mt-5">
+            <v-list-item>
+              <v-list-item-title class="cyan--text text--darken-1">Health Curve</v-list-item-title>
+              <v-item-content>
+                <v-btn class="mr-1" outlined color="cyan darken-1">D</v-btn>
+              </v-item-content>
+              <v-item-content>
+                <v-btn class="mr-1" outlined color="cyan darken-1">W</v-btn>
+              </v-item-content>
+              <v-item-content>
+                <v-btn class="mr-1" outlined color="cyan darken-1">M</v-btn>
+              </v-item-content>
+              <v-item-content>
+                <v-btn outlined color="cyan darken-1">Y</v-btn>
+              </v-item-content>
+            </v-list-item>
+          </v-list>
+        </v-flex>
+        
+        <v-flex>
+          <v-sparkline
+            :value="value"
+            :gradient="gradient"
+            :smooth="radius || false"
+            :padding="padding"
+            :line-width="width"
+            :stroke-lineCap="lineCap"
+            :gradient-direction="gradientDirection"
+            :fill="fill"
+            :type="type"
+            :auto-line-width="autoLineWidth"
+            auto-draw=""
+            >
+          </v-sparkline>
+        </v-flex>
+        <v-flex class="mt-5">
+          <v-list class="nl-5">
+            <v-list-item>
+              <v-list-item-avatar color="cyan darken-1" size="20px"></v-list-item-avatar>
+              <v-list-item-title>Average</v-list-item-title>
+              <v-list-item-avatar color="cyan darken-1" size="20px"></v-list-item-avatar>
+              <v-list-item-title class="ml-5">My Data</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-flex>
+        </v-col>
+        <v-col cols="12" md="4">
+          <v-flex class="nl-10">
+            <v-list>
+              <v-list-item>
+                <v-list-item-title class="cyan--text text--darken-1">Nearest Treatment & Advice</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-flex>
+          <v-flex class="nl-10">
+            <v-row>
+              <v-date-picker
+              v-model="date2"
+              :event-color="date=>date[9] % 2 ? 'red': 'yellow'"
+              :events="functionEvents"
+              color="cyan darken-1"
+              ></v-date-picker>
+            </v-row>
+          </v-flex>
+        </v-col>
+    </v-row>
+  </v-flex>
+      </v-container>
     </v-app>
   </v-flex>
     </v-layout>
